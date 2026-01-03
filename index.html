@@ -5,17 +5,16 @@
     <title>Calculadora de Notas | Nota final ponderada</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO básico -->
     <meta name="description" content="Calculadora de notas online para estudiantes de instituto y universidad. Calcula tu nota final ponderada según porcentajes y calificaciones.">
     <meta name="keywords" content="calculadora de notas, calcular nota final, nota ponderada, aprobar examen">
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D77ZHHDKMQ"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C3YJPEQ96N"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-D77ZHHDKMQ');
+
+      gtag('config', 'G-C3YJPEQ96N');
     </script>
 
     <style>
@@ -172,11 +171,14 @@ function calcular() {
 
     notaFinal = notaFinal.toFixed(2);
 
-    /* Evento Google Analytics */
-    gtag('event', 'calcular_nota', {
-        event_category: 'interaccion',
-        event_label: 'boton_calcular'
-    });
+    /* Evento Google Analytics: 
+       Se enviará automáticamente a la propiedad G-C3YJPEQ96N */
+    if (typeof gtag === 'function') {
+        gtag('event', 'calcular_nota', {
+            event_category: 'interaccion',
+            event_label: 'boton_calcular'
+        });
+    }
 
     if (notaFinal >= 5) {
         resultado.innerHTML = `<span class="success">✅ Nota final: ${notaFinal} — APROBADO</span>`;
@@ -188,5 +190,3 @@ function calcular() {
 
 </body>
 </html>
-
-
