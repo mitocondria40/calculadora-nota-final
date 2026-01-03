@@ -8,15 +8,14 @@
     <meta name="description" content="Calculadora de notas online para estudiantes de instituto y universidad. Calcula tu nota final ponderada según porcentajes y calificaciones.">
     <meta name="keywords" content="calculadora de notas, calcular nota final, nota ponderada, aprobar examen">
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D77ZHHDKMQ"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CZ1GF3J8R2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-D77ZHHDKMQ');
+      gtag('config', 'G-CZ1GF3J8R2');
     </script>
-
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -171,8 +170,7 @@ function calcular() {
 
     notaFinal = notaFinal.toFixed(2);
 
-    /* Evento Google Analytics: 
-       Se enviará automáticamente a la propiedad G-C3YJPEQ96N */
+    /* Se envía el evento usando la configuración global de gtag cargada arriba */
     if (typeof gtag === 'function') {
         gtag('event', 'calcular_nota', {
             event_category: 'interaccion',
@@ -190,4 +188,3 @@ function calcular() {
 
 </body>
 </html>
-
